@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Story - Boutique</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+
+    background: url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c') no-repeat center/cover;
+    background-attachment: fixed; /* parallax effect */
+
+    position: relative;
+}
+
+/* overlay to make text readable */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.85); /* light overlay */
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+        /* 🔥 NAVBAR (STICKY + GLASS EFFECT) */
+        .nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: linear-gradient(90deg, #b08968, #ddb892); /* 🔥 gradient */
+    padding: 15px 0;
+    text-align: center;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+        .nav-item {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    color: #fff5e1;
+}
+
+.nav-item::after {
+    background: white;
+}
+
+        /* 🔥 HEADER */
+        .header-banner {
+            margin-top: 70px; /* important for fixed navbar */
+            background: url('https://images.unsplash.com/photo-1445205170230-053b83016050') no-repeat center/cover;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .header-banner::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
+
+        .banner-overlay {
+            position: relative;
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+
+        /* 🔥 ABOUT SECTION */
+        .about-section {
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content-wrap {
+            max-width: 1000px;
+        }
+
+        .title-large {
+            font-family: 'Playfair Display', serif;
+            font-size: 34px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .content-text {
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .content-text p {
+            margin-bottom: 20px;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .image-box img:hover {
+            transform: scale(1.05);
+        }
+
+        /* SECOND TEXT */
+        .full-text {
+            margin-top: 50px;
+            font-size: 15px;
+            line-height: 1.8;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #fafafa;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+        }
+
+        /* 📱 RESPONSIVE */
+        @media(max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .banner-overlay {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="nav-container">
+        <a href="index.html" class="nav-item">INDEX</a>
+        <a href="Home.html" class="nav-item">HOME</a>
+        <a href="Collection.html" class="nav-item">COLLECTIONS</a>
+        <a href="Contact.html" class="nav-item">CONTACT</a>
+        <a href="cart.html" class="nav-item">CART🛒</a>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header-banner">
+        <div class="banner-overlay">OUR STORY</div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="about-section">
+        <div class="content-wrap">
+
+            <div class="title-large">Craftsmanship & Heritage</div>
+
+            <div class="content-grid">
+
+                <div class="content-text">
+                    <p>Founded in 2026, our boutique was born from a passion for timeless fashion and handcrafted excellence. We believe clothing should be meaningful, elegant, and made with purpose.</p>
+
+                    <p>Every piece reflects a journey — from raw materials to refined design — crafted with care and authenticity.</p>
+                </div>
+
+                <div class="image-box">
+                    <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb" alt="Craftsmanship">
+                </div>
+
+            </div>
+
+            <div class="full-text">
+                <p>From handwoven silks to carefully sourced fabrics, we collaborate with skilled artisans to preserve tradition while embracing modern aesthetics.</p>
+
+                <p>Our mission is to bring you clothing that doesn’t just look beautiful — but carries a story, supports craftsmanship, and stands the test of time.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>© 2026 Boutique Shop | Designed with elegance</p>
+    </div>
+
+</body>
+</html>

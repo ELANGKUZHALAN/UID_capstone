@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boutique Home Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAV BAR */
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            background-image: url('https://i.pinimg.com/736x/13/2f/c7/132fc7667acb84173d68bb761807edba.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid gray;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin: 0 20px;
+        }
+
+        /* HERO SECTION */
+        .header-background {
+            background-image: url('https://as2.ftcdn.net/jpg/06/34/09/69/1000_F_634096945_nT013AXOaokOmXXU0mRlfSLmnSbbmZXw.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            width: 100%;
+        }
+
+		#cart-section {
+			background-image: url('https://i.pinimg.com/736x/81/a5/6b/81a56b68f8aa2a706dcdec695cd81dff.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+        .hero-text-container {
+            text-align: center;
+            padding-top: 200px;
+        }
+
+        .white-box {
+            background-color: white;
+            display: inline-block;
+            padding: 40px;
+            border: 2px solid black;
+        }
+
+        /* PRODUCT SECTION */
+        .content-area {
+            background-image: url('https://i.pinimg.com/736x/81/a5/6b/81a56b68f8aa2a706dcdec695cd81dff.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .product-card {
+            background-color: white;
+            width: 260px;
+            display: inline-block;
+            margin: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .product-image {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-details {
+            padding: 15px;
+        }
+
+        .product-details h3 {
+            margin: 10px 0 5px;
+        }
+
+        .product-price {
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .product-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: #eeeeee;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<script>
+    let cart = [];
+    let total = 0;
+
+    function addToCart(name, price) {
+        cart.push({ name, price });
+        total += price;
+        updateCart();
+    }
+
+    function updateCart() {
+        let cartItemsDiv = document.getElementById("cart-items");
+        cartItemsDiv.innerHTML = "";
+
+        cart.forEach((item, index) => {
+            let div = document.createElement("div");
+            div.style.margin = "10px";
+            div.innerHTML = `
+                ${item.name} - $${item.price}
+                <button onclick="removeItem(${index})">❌</button>
+            `;
+            cartItemsDiv.appendChild(div);
+        });
+
+        document.getElementById("cart-total").innerText = total;
+    }
+
+    function removeItem(index) {
+        total -= cart[index].price;
+        cart.splice(index, 1);
+        updateCart();
+    }
+</script>
+
+
+<body>
+
+    <!-- NAV BAR -->
+    <div class="nav-bar">
+        <a href="index.html" class="nav-link">INDEX</a>
+        <a href="Collection.html" class="nav-link">COLLECTIONS</a>
+        <a href="About.html" class="nav-link">ABOUT</a>
+        <a href="Contact.html" class="nav-link">CONTACT</a>
+        <a href="cart.html" class="nav-link">CART🛒</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <div class="header-background">
+        <div class="hero-text-container">
+            <div class="white-box">
+                <h1>THE BOUTIQUE</h1>
+                <p>High Quality. Timeless Style. Artisan Made.</p>
+                <br>
+                <a href="Collection.html" style="background:black;color:white;padding:10px 20px;text-decoration:none;">
+                    SHOP NOW
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="content-area">
+        <h1>OUR FEATURED ITEMS</h1>
+        <br>
+
+        <div class="product-card">
+            <div class="product-image" style="
+                background-image:url('handbag1.jpg');">
+            </div>
+            <div class="product-details">
+                <h3>Handmade Bag</h3>
+                <p class="product-price">$150</p>
+                <a href="#" class="product-btn" onclick="addToCart('Handmade Bag',150)">Add to Cart</a>
+
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="
+                background-image:url('scarf.jpg');">
+            </div>
+            <div class="product-details">
+                <h3>Silk Scarf</h3>
+                <p class="product-price">$60</p>
+                <a href="#" class="product-btn" onclick="addToCart('Silk Scarf',60)">Add to Cart</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="
+                background-image:url('wallet.jpg');">
+            </div>
+            <div class="product-details">
+                <h3>Leather Wallet</h3>
+                <p class="product-price">$45</p>
+                <a href="#" class="product-btn" onclick="addToCart('Leather Wallet',45)">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+	<!-- CART SECTION -->
+	<div id="cart-section" style="padding:40px;text-align:center;background:#f9f9f9;">
+	    <h2>Your Cart</h2>
+
+	    <div id="cart-items"></div>
+
+	    <h3>Total: $<span id="cart-total">0</span></h3>
+	</div>
+
+	
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>123 Boutique Street, New Delhi, India</p>
+        <p>Email: contact@boutique.com</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hair Products - Boutique</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.95)),
+    url('https://images.unsplash.com/photo-1620916566398-39f1143ab7be') no-repeat center/cover;
+
+    background-attachment: fixed;
+}
+
+/* NAVBAR */
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+}
+
+.nav-item {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+}
+
+/* HEADER */
+.header {
+    margin-top: 60px;
+    padding: 60px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 40px;
+}
+
+/* GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+}
+
+.price {
+    color: #b08968;
+    font-weight: bold;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: black;
+    color: white;
+    text-decoration: none;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: black;
+    color: white;
+}
+</style>
+
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav-container">
+    <a href="index.html" class="nav-item">INDEX</a>
+    <a href="Collection.html" class="nav-item">BACK</a>
+    <a href="cart.html" class="nav-item">CART🛒</a>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>Hair Care Collection</h1>
+    <p>Natural solutions for healthy, beautiful hair</p>
+</div>
+
+<!-- PRODUCTS -->
+<div class="products">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be">
+        <div class="card-content">
+            <h3>Hair Oil</h3>
+            <p>Natural oils</p>
+            <div class="price">₹899</div>
+            <button class="btn" onclick="addToCart('Hair Oil', 899)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6">
+        <div class="card-content">
+            <h3>Shampoo</h3>
+            <p>Healthy hair</p>
+            <div class="price">₹499</div>
+            <button class="btn" onclick="addToCart('Shampoo', 499)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348">
+        <div class="card-content">
+            <h3>Hair Serum</h3>
+            <p>Smooth finish</p>
+            <div class="price">₹699</div>
+            <button class="btn" onclick="addToCart('Hair Serum', 699)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc">
+        <div class="card-content">
+            <h3>Conditioner</h3>
+            <p>Soft & shiny</p>
+            <div class="price">₹599</div>
+            <button class="btn" onclick="addToCart('Conditioner', 599)">Add to Cart</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Boutique Shop
+</div>
+
+</body>
+</html>

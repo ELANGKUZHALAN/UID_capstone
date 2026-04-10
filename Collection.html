@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Collections - Boutique</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* FULL PAGE BACKGROUND */
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20231012/pngtree-texture-of-cotton-fabric-a-white-cloth-pattern-background-image_13628612.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* NAVBAR */
+.nav-container {
+    background-image: url('https://i.pinimg.com/1200x/a6/16/43/a616437e36db0f482bbcae421c98f6e7.jpg');
+    background-size: cover;
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-item {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* BANNER */
+.header-banner {
+    background-image: url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd47');
+    background-size: cover;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-title-box {
+    background: white;
+    padding: 20px 40px;
+    border: 1px solid black;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    position: relative;
+    padding: 50px;
+    text-align: center;
+
+    /* BETTER BACKGROUND */
+    background-image: url('https://wallpapermural.com/cdn/shop/products/SubtleBotanyBeige-deatailed-floral-minimal-wallpaper-mural_533x.jpg?v=1750700472');
+    background-size: cover;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+/* OVERLAY */
+.main-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+}
+
+/* CONTENT ABOVE OVERLAY */
+.main-content * {
+    position: relative;
+}
+
+/* GRID */
+.collection-row {
+    margin-bottom: 40px;
+}
+
+.collection-box {
+    display: inline-block;
+    width: 40%;
+    margin: 15px;
+    text-align: left;
+    vertical-align: top;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.collection-box:hover {
+    transform: translateY(-8px);
+}
+
+/* IMAGE */
+.image-div {
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+/* TEXT */
+.text-div {
+    padding: 10px 0;
+}
+
+.text-div h3 {
+    margin: 10px 0 5px;
+}
+
+.text-div p {
+    color: #555;
+}
+
+/* BUTTON */
+.button-link {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.button-link:hover {
+    background: #444;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid rgb(0, 0, 0);
+    background: black;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="nav-container">
+    <a href="index.html" class="nav-item">INDEX</a>
+    <a href="Home.html" class="nav-item">HOME</a>
+    <a href="About.html" class="nav-item">ABOUT</a>
+    <a href="Contact.html" class="nav-item">CONTACT</a>
+    <a href="cart.html" class="nav-item">CART🛒</a>
+</div>
+
+<!-- BANNER -->
+<div class="header-banner">
+    <div class="banner-title-box">
+        <h1>COLLECTION 2026</h1>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+    <div class="collection-row">
+
+        <div class="collection-box">
+            <div class="image-div" style="background-image:url('https://images.unsplash.com/photo-1591561954557-26941169b49e');"></div>
+            <div class="text-div">
+                <h3>LEATHER BAGS</h3>
+                <p>Handcrafted premium leather accessories.</p>
+                <a href="Collection1.html" class="button-link">VIEW MORE</a>
+            </div>
+        </div>
+
+        <div class="collection-box">
+            <div class="image-div" style="background-image:url('https://images.unsplash.com/photo-1589363460779-cd717d2ed8fa');"></div>
+            <div class="text-div">
+                <h3>SILK JACKETS</h3>
+                <p>Lightweight textiles for every season.</p>
+                <a href="Collection2.html" class="button-link">VIEW MORE</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="collection-row">
+
+        <div class="collection-box">
+            <div class="image-div" style="background-image:url('https://images.unsplash.com/photo-1617038220319-276d3cfab638');"></div>
+            <div class="text-div">
+                <h3>ARTISAN JEWELRY</h3>
+                <p>Gold and silver pieces made by hand.</p>
+                <a href="Collection3.html" class="button-link">VIEW MORE</a>
+            </div>
+        </div>
+
+        <div class="collection-box">
+            <div class="image-div" style="background-image:url('https://images.unsplash.com/photo-1608571423902-eed4a5ad8108');"></div>
+            <div class="text-div">
+                <h3>HAIR PRODUCTS</h3>
+                <p>Essential oils and beauty essentials.</p>
+                <a href="Collection4.html" class="button-link">VIEW MORE</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p style="color: blanchedalmond;">© 2026 Boutique Shop</p>
+</div>
+
+</body>
+</html>

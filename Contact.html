@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us - Boutique</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌄 BACKGROUND */
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.9)),
+    url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd47') no-repeat center/cover;
+
+    background-attachment: fixed;
+}
+
+/* 🔥 NAVBAR */
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    backdrop-filter: blur(10px);
+    background: rgba(176, 137, 104, 0.7);
+
+    padding: 15px 0;
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.nav-item {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+/* hover underline */
+.nav-item::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: white;
+    transition: 0.3s;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+/* 🔥 HEADER */
+.header-banner {
+    margin-top: 70px;
+    height: 300px;
+
+    background: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d') no-repeat center/cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header-banner::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.banner-overlay {
+    position: relative;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    letter-spacing: 3px;
+}
+
+/* ✨ CONTACT SECTION */
+.contact-container {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-box {
+    max-width: 700px;
+    width: 100%;
+
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact-box p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.label-text {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 🔥 BUTTON */
+.submit-button {
+    background: linear-gradient(90deg, #b08968, #ddb892);
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    transform: scale(1.03);
+}
+
+/* INFO BOX */
+.info-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    background: #f8f8f8;
+}
+
+/* 📱 RESPONSIVE */
+@media(max-width: 768px) {
+    .contact-box {
+        padding: 25px;
+    }
+
+    .banner-overlay {
+        font-size: 26px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="nav-container">
+    <a href="index.html" class="nav-item">INDEX</a>
+    <a href="Home.html" class="nav-item">HOME</a>
+    <a href="Collection.html" class="nav-item">COLLECTIONS</a>
+    <a href="about.html" class="nav-item">ABOUT</a>
+    <a href="cart.html" class="nav-item">CART🛒</a>
+</div>
+
+<!-- HEADER -->
+<div class="header-banner">
+    <div class="banner-overlay">CONTACT US</div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-container">
+    <div class="contact-box">
+
+        <h2>Get In Touch</h2>
+        <p>Have a question? We'd love to hear from you.</p>
+
+        <div class="form-group">
+            <div class="label-text">Full Name</div>
+            <input type="text" placeholder="Your name">
+        </div>
+
+        <div class="form-group">
+            <div class="label-text">Email Address</div>
+            <input type="email" placeholder="email@example.com">
+        </div>
+
+        <div class="form-group">
+            <div class="label-text">Message</div>
+            <textarea rows="6" placeholder="Your message..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="SEND MESSAGE" class="submit-button">
+        </div>
+
+        <div class="info-section">
+            <strong>Visit Our Studio:</strong><br>
+            123, xyz street, New Delhi<br><br>
+
+            <strong>Email:</strong> hello@thesummercollection.com<br>
+            <strong>Phone:</strong> +91 1234567890
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>© 2026 Boutique Shop</p>
+</div>
+
+</body>
+</html>
